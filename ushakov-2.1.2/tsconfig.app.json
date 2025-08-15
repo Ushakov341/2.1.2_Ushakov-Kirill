@@ -1,27 +1,38 @@
+// Настройки TypeScript для приложения
 {
+  // Параметры компилятора
   "compilerOptions": {
-    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
-    "target": "ES2022",
+    // Версия JavaScript для компиляции
+    "target": "ES2020",
     "useDefineForClassFields": true,
-    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    // Библиотеки для использования
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    // Система модулей
     "module": "ESNext",
+    // Пропускать проверку типов в библиотеках
     "skipLibCheck": true,
 
-    /* Bundler mode */
+    /* Режим сборщика */
+    // Разрешение модулей через сборщик
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
-    "verbatimModuleSyntax": true,
+    // Изолированные модули
+    "isolatedModules": true,
     "moduleDetection": "force",
+    // Не создавать выходные файлы
     "noEmit": true,
+    // JSX для React
     "jsx": "react-jsx",
 
-    /* Linting */
+    /* Проверка кода */
+    // Строгий режим
     "strict": true,
+    // Предупреждать о неиспользуемых переменных
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "erasableSyntaxOnly": true,
-    "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    // Проверять все ветки switch
+    "noFallthroughCasesInSwitch": true
   },
+  // Включить папку src
   "include": ["src"]
 }
